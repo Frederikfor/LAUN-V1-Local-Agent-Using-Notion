@@ -1,0 +1,8 @@
+cada tipo de columna espera una estructura JSON distinta. No puedes simplemente mandar "Tags": "python" — tienes que envolver el valor en la forma exacta que Notion espera según el tipo de columna. Aquí está el mapeo que vas a necesitar constantemente:
+
+Tipo de columna	Estructura que espera
+title	{"title": [{"text": {"content": "texto"}}]}
+rich_text	{"rich_text": [{"text": {"content": "texto"}}]}
+multi_select	{"multi_select": [{"name": "tag1"}, {"name": "tag2"}]}
+select	{"select": {"name": "Alta"}}
+date	{"date": {"start": "2026-09-19"}}
